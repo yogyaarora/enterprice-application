@@ -1,0 +1,3 @@
+.no-gutters > .col, .no-gutters > [class*="col-3"] {
+    margin-left: 8px;
+}

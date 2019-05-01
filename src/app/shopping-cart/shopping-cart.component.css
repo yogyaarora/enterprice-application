@@ -1,0 +1,12 @@
+.thumbnail{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size:cover;
+}
+.quantity{
+    padding: 0px;
+}
+.table td {
+    vertical-align: inherit;
+}

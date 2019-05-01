@@ -1,0 +1,34 @@
+<!-- <div class="sticky-top">
+  <div class="list-group">
+    <a 
+    [class.active]="!category"
+    routerLink="/"
+    class="list-group-item list-group-item-action"
+    >All Categories
+    </a>
+    <a 
+    *ngFor="let c of categories$|async"
+    [class.active]="c.key===category" 
+    class="list-group-item list-group-item-action"
+    routerLink="/"
+    [queryParams]="{category:c.key}"
+    >
+      {{c.payload.val().name}}
+    </a>
+  </div>
+</div> -->
+
+
+<div class="sticky-top">
+  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <a class="nav-link" [class.active]="!category" routerLink="/" id="v-pills-home-tab" data-toggle="pill"  role="tab" aria-controls="v-pills-home" aria-selected="true">All Categories</a>
+    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false"
+    *ngFor="let c of categories$|async"
+    [class.active]="c.key===category" 
+    routerLink="/"
+    [queryParams]="{category:c.key}"
+    >
+      {{c.payload.val().name}}
+    </a>
+  </div>
+</div>
